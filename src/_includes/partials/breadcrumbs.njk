@@ -1,0 +1,23 @@
+{% if page.url != "/" %}
+  <nav class="govuk-breadcrumbs" aria-label="Breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      {% set parts = page.url | split('/') %}
+      {% set path = "" %}
+      {% for part in parts %}
+        {% if part and not part.endsWith('.html') %}
+          {% set path = path + "/" + part %}
+          <li class="govuk-breadcrumbs__list-item">
+            {% if loop.last %}
+              {{ page.data.title }}
+            {% else %}
+              <a class="govuk-breadcrumbs__link" href="{{ path }}/">{{ part | replace("-", " ") }}</a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

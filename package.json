@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "dependencies": {
+    "govuk-frontend": "^5.11.1",
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "eleventy --serve & sass --watch src/styles/styles.scss:src/assets/styles.css --no-source-map",
+    "build:css": "sass src/styles/styles.scss:src/assets/styles.css --no-source-map",
+    "build": "npm run build:css && eleventy",
+    "clean": "rm -rf _site"
+  }
+}
