@@ -8,9 +8,10 @@
     "@11ty/eleventy": "^3.0.0"
   },
   "scripts": {
-    "dev": "eleventy --serve & sass --watch src/styles/styles.scss:src/assets/styles.css --no-source-map",
-    "build:css": "sass src/styles/styles.scss:src/assets/styles.css --no-source-map",
-    "build": "npm run build:css && eleventy",
+    "dev": "eleventy --serve",
+    "build:css": "sass --load-path=node_modules src/styles/styles.scss:src/assets/styles.css --no-source-map",
+    "copy:govuk": "mkdir -p src/assets/govuk && cp -R node_modules/govuk-frontend/dist/govuk/assets/* src/assets/govuk/",
+    "build": "npm run build:css && npm run copy:govuk && eleventy",
     "clean": "rm -rf _site"
   }
 }
