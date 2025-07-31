@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
 
-
-
-
-
+html, body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
 
 :root {
   --main-header-color: #003a69;
@@ -9345,6 +9344,68 @@
 
 .govuk-width-container {
   max-width: 1200px;
+}
+
+/* Load this AFTER govuk-frontend's CSS */
+
+/* Global default */
+html, body {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Form controls & common elements */
+body, p, a, small, strong, em, code, pre,
+input, button, select, textarea, label, legend, table, th, td {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* GOV.UK specific classes (these often set font-family explicitly) */
+.govuk-template,
+.govuk-body,
+.govuk-body-s,
+.govuk-body-m,
+.govuk-body-l,
+.govuk-heading-xl,
+.govuk-heading-l,
+.govuk-heading-m,
+.govuk-heading-s,
+.govuk-caption-xl,
+.govuk-caption-l,
+.govuk-caption-m,
+.govuk-link,
+.govuk-list,
+.govuk-hint,
+.govuk-label,
+.govuk-fieldset__legend,
+.govuk-breadcrumbs,
+.govuk-header,
+.govuk-footer,
+.govuk-tabs,
+.govuk-phase-banner,
+.govuk-tag,
+.govuk-inset-text,
+.govuk-warning-text,
+.govuk-summary-list,
+.govuk-accordion,
+.govuk-button {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* Optional: force inputs to use Arial on all platforms */
+input, textarea, select, button {
+  font-family: inherit !important;
+}
+
+.govuk-details {
+  border-top: 1px solid #b1b4b6;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.govuk-details__summary-text {
+  text-decoration: none;
+  margin-bottom: 0;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

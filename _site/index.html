@@ -5,22 +5,30 @@
     <title>The Best MF**** Tow Company</title>
     <link rel="stylesheet" href="/dist/styles.css" />
     <script src="/scripts/main.js"></script>
+    <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
   </head>
 
   <body class="govuk-template__body">
     
-    <header style="padding-top:5px; border-bottom:1px solid #b1b4b6;
-;" class="govuk-header" data-module="govuk-header">
+    <header class="govuk-header site-header" role="banner" data-module="govuk-header" style="padding-top:5px; border-bottom:1px solid #b1b4b6;">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="/" class="govuk-header__link govuk-header__link--homepage">
-       <img style="width:100px" src="/assets/images/logo.png" alt="Logo" /> 
+        <!-- Use your real intrinsic size (example 200x60). Adjust as needed. -->
+        <img
+          src="/assets/images/logo.png"
+          alt="Logo"
+          width="100"
+          height="33"
+          decoding="async"
+          fetchpriority="high"
+          style="width:100px; height:33px"
+        />
       </a>
     </div>
-      <button style="font-size:20px" id="menu-toggle" class="govuk-header__menu-button" type="button" aria-controls="navigation" aria-label="Show or hide navigation menu">
+    <button style="font-size:20px" id="menu-toggle" class="govuk-header__menu-button" type="button" aria-controls="navigation" aria-label="Show or hide navigation menu">
       <strong>Menu</strong>
     </button>
-
     <nav id="main-nav" class="govuk-header__navigation hide">
       <ul id="navigation" class="govuk-header__navigation-list" aria-label="Top Level Navigation">
         <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/">Home</a></li>
@@ -41,7 +49,7 @@
       <h2 class="govuk-heading-m" style="color:white" >Get 24/7 towing and roadside assistance </h2>
       
       
-      <button style="margin-top:30px" class="govuk-button govuk-button--start">Call (403) 606-5084</button>
+      <a style="margin-top:30px" href=tel:4036065084 class="govuk-button govuk-button--start">Call (403) 606-5084</a>
       
       </div>
       <div  class="govuk-grid-column-one-half">

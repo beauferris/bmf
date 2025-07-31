@@ -5,6 +5,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/dist/styles.css" />
     <script src="/scripts/main.js"></script>
+    <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
   </head>
 
   <body class="govuk-template__body">
@@ -21,7 +22,7 @@
       <h2 class="govuk-heading-m" style="color:white" >{{description}} </h2>
       
       {% if button_title %}
-      <button style="margin-top:30px" class="govuk-button govuk-button--start">{{button_title}}</button>
+      <a style="margin-top:30px" href={{button_link}} class="govuk-button govuk-button--start">{{button_title}}</a>
       {% endif %}
       </div>
       <div  class="govuk-grid-column-one-half">
