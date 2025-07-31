@@ -1,8 +1,24 @@
+
+
 <!DOCTYPE html>
 <html lang="en" class="govuk-template">
   <head>
-    <meta charset="utf-8" />
-    <title>{{ title }}</title>
+  <meta charset="utf-8" />
+  {% set pageTitle = seo.title or title or site.name %}
+    
+  {% set metaDescription = seo.description or description or site.description %}
+    
+
+
+  <title>{{ site.name + " | " + title }}</title>
+    
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="{{ robots }}">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="{{ seo.type or 'website' }}">
+    
     <link rel="stylesheet" href="/assets/styles.css" />
     <script src="/scripts/main.js"></script>
     <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
@@ -19,7 +35,7 @@
      {% include "partials/breadcrumbs.njk" %}
      
       <h2 style="color:white; margin:30px 0;max-width:35rem" class="govuk-heading-xl">{{title}}</h2>
-      <h2 class="govuk-heading-m" style="color:white" >{{description}} </h2>
+      <h2 class="govuk-body-lead" style="color:white" >{{description}} </h2>
       
       {% if button_title %}
       <a style="margin-top:30px" href={{button_link}} class="govuk-button govuk-button--start">{{button_title}}</a>
@@ -41,12 +57,18 @@
       <div class="govuk-grid-row">
       <div>
         <p class="govuk-body">{{ content | safe }}</p>
-
-          <div class="govuk-grid-column-two-thirds">
-          {% include "partials/accordion.njk" %}</div>
+{% include "partials/contact.njk" %}
+        <div class="govuk-grid-column-two-thirds">  
+            {% include "partials/accordion.njk" %}
+           </div>
+           
         </div>
+
+        
       </div>
+       
       </div>
+    
     </main>
 
   {% include "partials/footer.njk" %}

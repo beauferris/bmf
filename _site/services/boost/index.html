@@ -1,8 +1,24 @@
+
+
 <!DOCTYPE html>
 <html lang="en" class="govuk-template">
   <head>
-    <meta charset="utf-8" />
-    <title>Boost</title>
+  <meta charset="utf-8" />
+  
+    
+  
+    
+
+
+  <title>BMF Towing | Boost</title>
+    
+  <meta name="description" content="Battery dead? We&#39;ll get you powered up and on your way.">
+  <meta name="robots" content="">
+
+    <meta property="og:title" content="Boost">
+    <meta property="og:description" content="Battery dead? We&#39;ll get you powered up and on your way.">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="/assets/styles.css" />
     <script src="/scripts/main.js"></script>
     <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
@@ -79,7 +95,7 @@
 
      
       <h2 style="color:white; margin:30px 0;max-width:35rem" class="govuk-heading-xl">Boost</h2>
-      <h2 class="govuk-heading-m" style="color:white" >Battery dead? We&#39;ll get you powered up and on your way. </h2>
+      <h2 class="govuk-body-lead" style="color:white" >Battery dead? We&#39;ll get you powered up and on your way. </h2>
       
       
       <a style="margin-top:30px" href=tel:4036065084 class="govuk-button govuk-button--start">Call (403) 606-5084</a>
@@ -94,10 +110,10 @@
     </div>
     </div>
     </div>
-    <div style="background:#f3f2f1;height:100%;padding:1px 0;margin-bottom:30px" >
+    <div style="background:#f3f2f1;height:100%;padding:15px 0;margin-bottom:50px" >
 
 <div class="govuk-width-container">
-<h2>Servicing Calgary and surrounding areas</div></h2>
+<h2 style="margin-bottom:0;" class="govuk-heading-m">Servicing Calgary and surrounding areas</div></h2>
 </div>
 
     <main class="govuk-main-wrapper" id="main-content">
@@ -110,8 +126,62 @@
   <p class="govuk-body">We also carry replacement batteries in case your battery is beyond repair. Service available 24/7 in Calgary and surrounding areas.</p>
 </div></p>
 
-          <div class="govuk-grid-column-two-thirds">
-          <section >
+<div class="govuk-grid-column-two-thirds">
+
+ <h1 class="govuk-heading-l">Contact us</h1>
+
+<form
+  name="contact"
+  method="POST"
+  action="/thank-you/"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  class="govuk-!-margin-bottom-6"
+  netlify
+>
+  
+  <input type="hidden" name="form-name" value="contact" />
+
+  
+  <p class="govuk-visually-hidden">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+ <div class="govuk-grid-row">
+ <div class="govuk-grid-column-one-half">
+  <div class="govuk-form-group">
+    
+      <label class="govuk-label" for="name">Name</label>
+      <input class="govuk-input" id="name" name="name" type="text" required />
+    </div>
+  </div>
+<div class="govuk-grid-column-one-half">
+  <div class="govuk-form-group">
+    
+      <label class="govuk-label" for="email">Email</label>
+      <input class="govuk-input" id="email" name="email" type="email" required />
+    </div>
+  </div>
+</div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="phone">Phone</label>
+    <input class="govuk-input" id="phone" name="phone" type="tel" />
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="message">Message</label>
+    <textarea class="govuk-textarea" id="message" name="message" rows="6" required></textarea>
+  </div>
+
+
+
+  <button class="govuk-button" type="submit">Send</button>
+</form>
+</div>
+        <div class="govuk-grid-column-two-thirds">  
+            <section style="margin-bottom: 30px">
   <h2 class="govuk-heading-l">Frequently Asked Questions</h2>
 
   <details class="govuk-details">
@@ -157,14 +227,48 @@
       Our prices vary by service and distance. Contact us directly for a free estimate.
     </div>
   </details>
-</section></div>
+</section>
+           </div>
+           
         </div>
+
+        
       </div>
+       
       </div>
+    
     </main>
 
   <footer class="govuk-footer">
-  
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+    <p style="text-align:center;margin:0;" >
+     <img
+          src="/assets/images/blacklogo.png"
+          alt="Logo"
+          width="100"
+          height="33"
+          decoding="async"
+          fetchpriority="high"
+          style="width:100px; height:33px"
+        />
+        </div>
+      </p>
+        <div class="govuk-grid-column-one-quarter">
+      <p style="text-align:center;" class="govuk-body">   <strong>Phone:   <a class="govuk-link" href="tel:4036065084">(403) 606-5084</a>        </strong></p>
+       </div>
+        <div class="govuk-grid-column-one-quarter">
+         <p style="text-align:center;"  class="govuk-body"><strong>Email:  <a class="govuk-link" href="mailto:bmftowing@gmail.com">bmftowing@gmail.com</a>   </strong></p>      
+       </div>
+        <div class="govuk-grid-column-one-quarter">
+        <p style="text-align:center;" class="govuk-body"><strong> <a class="govuk-link" href="https://www.instagram.com/bmf.towing/">Instagram</a> </strong></p>
+        
+       </div>
+       
+        </div>
+        <p style="text-align:center;">Copyright © 2025 bmftowing.com All Rights Reserved.<p>
+  </div>
 </footer>
   </body>
 </html>
