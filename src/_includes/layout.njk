@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" class="govuk-template">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8" />
   {% set pageTitle = seo.title or title or site.name %}
     
@@ -44,7 +45,7 @@
       <div  class="govuk-grid-column-one-half">
       {% if image_url %}
       <img style="width: 100%; max-height:400px;border-radius:5px;object-fit: cover;
-    min-height: 400px;" src={{image_url}} />
+    min-height: 400px;" src={{image_url}} alt={{description}}/>
       {% endif %}
       </div>
     </div>
