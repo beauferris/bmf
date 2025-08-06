@@ -6871,10 +6871,10 @@ html, body {
   height: 100%;
 }
 
-.dfe-card img {
+/* .dfe-card img {
   height: 200px;
   object-fit: cover;
-}
+} */
 
 @media (max-width: 40.0525em) {
   .dfe-card {

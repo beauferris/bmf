@@ -7,6 +7,7 @@
     {% set metaDescription = seo.description or description or site.description %}
     {% set siteName = site.name %}
     {% set robots = robots or "index,follow" %}
+
     <title>{{ siteName + " | " + title }}</title>
     <meta name="description" content="{{ metaDescription}}">
     <meta name="robots" content="{{ robots }}">
