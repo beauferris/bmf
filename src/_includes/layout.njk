@@ -3,13 +3,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
-    {% set pageTitle = seo.title or title or site.name %}
 
     {% set metaDescription = seo.description or description or site.description %}
-
-    <title>{{ site.name + " | " + title }}</title>
-
-    <meta name="description" content="{{ description }}">
+    {% set siteName = site.name %}
+    {% set robots = robots or "index,follow" %}
+    <title>{{ siteName + " | " + title }}</title>
+    <meta name="description" content="{{ metaDescription}}">
     <meta name="robots" content="{{ robots }}">
 
     <meta property="og:title" content="{{ title }}">
