@@ -1,4 +1,5 @@
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
+const site = require("./src/_data/site"); // assume site.json exports { url: "https://yoursite.com"
 module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy({
   //   "node_modules/govuk-frontend/dist/govuk/all.js": "assets/js/govuk.js",
@@ -6,7 +7,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginSitemap, {
     sitemap: {
-      hostname: "https://bmftowing.com",
+      hostname: "https://www.bmftowing.ca/",
+      lastmodProperty: "date",
     },
   });
 
