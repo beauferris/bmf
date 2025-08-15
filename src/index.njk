@@ -8,22 +8,22 @@ image_url : "/assets/images/specialty-and-luxury-vehicles.jpeg"
 ---
 
 <div class="govuk-width-container">
-<h1>Services</h1>
- <div class="dfe-grid-container">
-  {% for posts in collections.posts %}
-    
+  <h1>Services</h1>
+  <div class="dfe-grid-container">
+    {% for posts in collections.posts %}
+
       <div class="dfe-card">
-      {% if posts.data.image_url %}
-        <img src={{posts.data.image_url}} alt={title} />
+        {% if posts.data.image_url %}
+          {# <img src={{posts.data.image_url}} alt={title} /> #}
         {% endif %}
-      <div class="dfe-card-container">
+        <div class="dfe-card-container">
           <h3 class="govuk-heading-m">
             <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
-        </h3>
-        <p class="govuk-body">{{posts.data.description}}
-      </div>
-      </div>
-    
-  {% endfor %}
-  </div>
+          </h3>
+          <p class="govuk-body">{{posts.data.description}}
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
   </div>
