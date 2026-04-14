@@ -2,5 +2,9 @@
   "name": "BMF Towing & Recovery",
   "description": "Towing and roadside assistance in Calgary.",
   "url": "https://www.bmftowing.ca",
-  "language": "en"
+  "language": "en",
+  "contactVideo": {
+    "src": "/assets/video/bmf.MOV.mov",
+    "poster": "/assets/images/towing.webp"
+  }
 }

@@ -1,0 +1,38 @@
+{% include "partials/header.njk" %}
+
+<div class="bow_landing govuk-!-padding-bottom-9 govuk-!-padding-top-9">
+  <div class="bow-width-container">
+    <div class="bow-landing-stack">
+      <div class="bow-landing-copy">
+        {% include "partials/breadcrumbs.njk" %}
+
+        <h2 style="color:white;max-width:45rem" class="bow-heading-xl font-univers-tagline govuk-!-margin-top-6">{{ title }}</h2>
+        <h2 class="bow-body-lead " style="color:white;max-width:45rem">{{ description }}</h2>
+
+        {% if button_title %}
+          <a style="margin-top:30px" href="{{ button_link }}" class="bow-button bow-button--start">{{ button_title }}</a>
+        {% endif %}
+      </div>
+      {% if landing_video or image_url %}
+      <div class="bow-landing-media">
+        {% if landing_video %}
+          <div class="bow-landing-video-frame">
+            <video
+              class="bow-landing-video"
+              src="{{ landing_video }}"
+              {% if landing_video_poster %}poster="{{ landing_video_poster }}"{% endif %}
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="{% if landing_video_label %}{{ landing_video_label }}{% else %}{{ description }}{% endif %}"
+            ></video>
+          </div>
+        {% elif image_url %}
+          <img class="bow-landing-image" src="{{ image_url }}" alt="{{ description }}"/>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

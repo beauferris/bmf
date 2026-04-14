@@ -1,0 +1,24 @@
+{# Full-bleed background video (autoplay, muted, loop). Override: video_src, video_poster #}
+{% set _src = video_src %}
+{% if not _src and site.contactVideo and site.contactVideo.src %}
+  {% set _src = site.contactVideo.src %}
+{% endif %}
+{% set _poster = video_poster %}
+{% if not _poster and site.contactVideo and site.contactVideo.poster %}
+  {% set _poster = site.contactVideo.poster %}
+{% endif %}
+{% if _src %}
+<div class="bow-video-bg" aria-hidden="true">
+  <video
+    class="bow-video-bg__video"
+    src="{{ _src }}"
+    {% if _poster %}poster="{{ _poster }}"{% endif %}
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  ></video>
+  <div class="bow-video-bg__scrim"></div>
+</div>
+{% endif %}

@@ -1,28 +1,75 @@
-<header class="govuk-header site-header" role="banner" data-module="govuk-header" style="padding-top:5px; border-bottom:1px solid #b1b4b6;">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
-        <!-- Use your real intrinsic size (example 200x60). Adjust as needed. -->
+<header class="bow-header site-header" role="banner" data-module="bow-header">
+  <div class="bow-header__bar bow-width-container">
+    <div class="bow-header__logo">
+      <a href="/" class="bow-header__link bow-header__link--homepage">
         <img
           src="/assets/images/logo.png"
-          alt="Logo"
+          alt="{{ site.name }}"
           width="150"
-          height="51.24"
+          height="51"
           decoding="async"
           fetchpriority="high"
-          style="width:150px; height:auto;"
         />
       </a>
     </div>
-    <button style="font-size:20px" id="menu-toggle" class="govuk-header__menu-button" type="button" aria-controls="navigation" aria-label="Show or hide navigation menu">
-      <strong>Menu</strong>
-    </button>
-    <nav id="main-nav" class="govuk-header__navigation hide">
-      <ul id="navigation" class="govuk-header__navigation-list" aria-label="Top Level Navigation">
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/">Home</a></li>
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/services">Services</a></li>
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/contact">Contact</a></li>
+    <div class="bow-header__end">
+      <nav class="bow-header__desktop-nav" aria-label="Primary navigation">
+        <ul class="bow-header__nav-list">
+          <li>
+            <a
+              href="/"
+              class="bow-header__nav-link"
+              {% if page.url == '/' %}aria-current="page"{% endif %}
+            >Home</a>
+          </li>
+          <li>
+            <a
+              href="/services/"
+              class="bow-header__nav-link"
+              {% if page.url and '/services' in page.url %}aria-current="page"{% endif %}
+            >Services</a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+              class="bow-header__nav-link"
+              {% if page.url == '/contact/' %}aria-current="page"{% endif %}
+            >Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        id="menu-toggle"
+        class="bow-header__menu-button"
+        aria-controls="mobile-menu-panel"
+        aria-expanded="false"
+        aria-label="Open menu"
+      >
+        <span class="bow-header__menu-bars" aria-hidden="true">
+          <span class="bow-header__menu-bar"></span>
+          <span class="bow-header__menu-bar"></span>
+          <span class="bow-header__menu-bar"></span>
+        </span>
+        <span class="bow-header__menu-close" aria-hidden="true">×</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu-panel" class="bow-header__mobile-panel" aria-hidden="true">
+    <div class="bow-width-container bow-header__mobile-inner">
+    <nav aria-label="Mobile navigation">
+      <ul class="bow-header__mobile-list">
+        <li class="bow-header__mobile-item">
+          <a href="/" class="bow-header__mobile-link">Home</a>
+        </li>
+        <li class="bow-header__mobile-item">
+          <a href="/services/" class="bow-header__mobile-link">Services</a>
+        </li>
+        <li class="bow-header__mobile-item bow-header__mobile-item--last">
+          <a href="/contact/" class="bow-header__mobile-link">Contact</a>
+        </li>
       </ul>
     </nav>
+    </div>
   </div>
 </header>

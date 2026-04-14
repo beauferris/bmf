@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="bow-template">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+
+    {% set metaDescription = seo.description or description or site.description %}
+    {% set siteName = site.name %}
+    {% set robots = robots or "index,follow" %}
+
+    <title>{{ siteName + " | " + title }}</title>
+    <meta name="description" content="{{ metaDescription}}">
+    <meta name="robots" content="{{ robots }}">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="{{ seo.type or 'website' }}">
+
+    <link rel="preload" href="/assets/fonts/UniversNextPro-ExtraBlackExtendedItalic.ttf" as="font" type="font/ttf" crossorigin>
+    {% if hero_background_image %}
+    <link rel="preload" href="{{ hero_background_image }}" as="image" fetchpriority="high">
+    {% endif %}
+    <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
+
+    <link rel="stylesheet" href="/assets/styles.css"/>
+    <script src="/scripts/main.js" defer></script>
+  </head>
+
+  <body class="bow-template__body">
+ 
+
+    {% include "partials/header.njk" %}
+
+
+   
+ 
+
+      <section class="bow-contact-section bow-section" aria-label="Contact">
+        <div class="bow-width-container bow-main-section">
+          <div class="bow-contact-split">
+            <div class="bow-contact-split__form">
+              {% include "partials/contact.njk" %}
+            </div>
+            <div class="bow-contact-split__media">
+              {% include "partials/video-background.njk" %}
+            </div>
+          </div>
+        </div>
+      </section>
+            <section class="bow-accordion-band bow-bg-black" aria-label="Frequently asked questions">
+        <div class="bow-width-container bow-main-section bow-section">
+          {% include "partials/accordion.njk" %}
+        </div>
+      </section>
+    </main>
+
+    {% include "partials/footer.njk" %}
+  </body>
+</html>

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="bow-template">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
+
+    
+
+    
 
     
     
@@ -16,51 +20,103 @@
     <meta property="og:description" content="If it rolls, we tow it-contact us for custom jobs.">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="/assets/styles.css"/>
-    <script src="/scripts/main.js"></script>
+    <link rel="preload" href="/assets/fonts/UniversNextPro-ExtraBlackExtendedItalic.ttf" as="font" type="font/ttf" crossorigin>
+    
     <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
+    
+
+    <link rel="stylesheet" href="/assets/styles.css"/>
+    <script src="/scripts/main.js" defer></script>
   </head>
 
-  <body class="govuk-template__body">
-
-    <header class="govuk-header site-header" role="banner" data-module="govuk-header" style="padding-top:5px; border-bottom:1px solid #b1b4b6;">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
-        <!-- Use your real intrinsic size (example 200x60). Adjust as needed. -->
+  <body class="bow-template__body">
+    
+      <header class="bow-header site-header" role="banner" data-module="bow-header">
+  <div class="bow-header__bar bow-width-container">
+    <div class="bow-header__logo">
+      <a href="/" class="bow-header__link bow-header__link--homepage">
         <img
           src="/assets/images/logo.png"
-          alt="Logo"
+          alt="BMF Towing &amp; Recovery"
           width="150"
-          height="51.24"
+          height="51"
           decoding="async"
           fetchpriority="high"
-          style="width:150px; height:auto;"
         />
       </a>
     </div>
-    <button style="font-size:20px" id="menu-toggle" class="govuk-header__menu-button" type="button" aria-controls="navigation" aria-label="Show or hide navigation menu">
-      <strong>Menu</strong>
-    </button>
-    <nav id="main-nav" class="govuk-header__navigation hide">
-      <ul id="navigation" class="govuk-header__navigation-list" aria-label="Top Level Navigation">
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/">Home</a></li>
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/services">Services</a></li>
-        <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/contact">Contact</a></li>
+    <div class="bow-header__end">
+      <nav class="bow-header__desktop-nav" aria-label="Primary navigation">
+        <ul class="bow-header__nav-list">
+          <li>
+            <a
+              href="/"
+              class="bow-header__nav-link"
+              
+            >Home</a>
+          </li>
+          <li>
+            <a
+              href="/services/"
+              class="bow-header__nav-link"
+              aria-current="page"
+            >Services</a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+              class="bow-header__nav-link"
+              
+            >Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        id="menu-toggle"
+        class="bow-header__menu-button"
+        aria-controls="mobile-menu-panel"
+        aria-expanded="false"
+        aria-label="Open menu"
+      >
+        <span class="bow-header__menu-bars" aria-hidden="true">
+          <span class="bow-header__menu-bar"></span>
+          <span class="bow-header__menu-bar"></span>
+          <span class="bow-header__menu-bar"></span>
+        </span>
+        <span class="bow-header__menu-close" aria-hidden="true">×</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu-panel" class="bow-header__mobile-panel" aria-hidden="true">
+    <div class="bow-width-container bow-header__mobile-inner">
+    <nav aria-label="Mobile navigation">
+      <ul class="bow-header__mobile-list">
+        <li class="bow-header__mobile-item">
+          <a href="/" class="bow-header__mobile-link">Home</a>
+        </li>
+        <li class="bow-header__mobile-item">
+          <a href="/services/" class="bow-header__mobile-link">Services</a>
+        </li>
+        <li class="bow-header__mobile-item bow-header__mobile-item--last">
+          <a href="/contact/" class="bow-header__mobile-link">Contact</a>
+        </li>
       </ul>
     </nav>
+    </div>
   </div>
 </header>
 
-    <div class="landing">
-      <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half" >
-            
-  <nav class="govuk-breadcrumbs" aria-label="Breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+
+<div class="bow_landing govuk-!-padding-bottom-9 govuk-!-padding-top-9">
+  <div class="bow-width-container">
+    <div class="bow-landing-stack">
+      <div class="bow-landing-copy">
+        
+  <nav class="bow-breadcrumbs" aria-label="Breadcrumbs">
+    <ol class="bow-breadcrumbs__list">
+      <li class="bow-breadcrumbs__list-item">
+        <a class="bow-breadcrumbs__link" href="/">Home</a>
       </li>
       
       
@@ -69,11 +125,11 @@
       
         
           
-          <li class="govuk-breadcrumbs__list-item">
+          <li class="bow-breadcrumbs__list-item">
             
               
               
-              <a class="govuk-breadcrumbs__link" href="/services/">
+              <a class="bow-breadcrumbs__link" href="/services/">
                 Services
               </a>
             
@@ -82,11 +138,11 @@
       
         
           
-          <li class="govuk-breadcrumbs__list-item">
+          <li class="bow-breadcrumbs__list-item">
             
               
               
-              <a class="govuk-breadcrumbs__link" href="/services/anything-and-everything/">
+              <a class="bow-breadcrumbs__link" href="/services/anything-and-everything/">
                 Anything and everything
               </a>
             
@@ -99,43 +155,98 @@
   </nav>
 
 
-            <h2 style="color:white; margin:30px 0;max-width:35rem" class="govuk-heading-xl">Anything and Everything</h2>
-            <h2 class="govuk-body-lead" style="color:white" >If it rolls, we tow it-contact us for custom jobs.
-            </h2>
+        <h2 style="color:white;max-width:45rem" class="bow-heading-xl font-univers-tagline govuk-!-margin-top-6">Anything and Everything</h2>
+        <h2 class="bow-body-lead " style="color:white;max-width:45rem">If it rolls, we tow it-contact us for custom jobs.</h2>
 
-            
-              <a style="margin-top:30px" href=tel:4036065084 class="govuk-button govuk-button--start">Call (403) 606-5084</a>
-            
-          </div>
-          <div  class="govuk-grid-column-one-half">
-            
-          </div>
-        </div>
+        
+          <a style="margin-top:30px" href="tel:4036065084" class="bow-button bow-button--start">Call (403) 606-5084</a>
+        
       </div>
+      
     </div>
-    <div style="background:#f3f2f1;height:100%;padding:15px 0;margin-bottom:50px" >
-
-<div class="govuk-width-container">
-<h2 style="margin-bottom:0;" class="govuk-heading-m">Servicing Calgary and surrounding areas</div></h2>
+  </div>
 </div>
 
-    <main class="govuk-main-wrapper" id="main-content">
-      <div class="govuk-width-container">
-        <div class="govuk-grid-row">
-          <div>
-            <p class="govuk-body"><div class="govuk-grid-column-two-thirds">
-  <h2 class="govuk-heading-l">Custom Towing Solutions for Any Job</h2>
-  <p class="govuk-body">Got something unusual to tow? From oversized trailers to farm equipment, we can tow just about anything. If it rolls (or even if it doesn’t), we have the gear and expertise to move it.</p>
-  <ul class="govuk-list govuk-list--bullet">
+    
+
+    <main class="bow-main-wrapper" id="main-content">
+      <div class="bow-width-container">
+        <div class="bow-grid-row">
+          <div class="bow-grid-column-full">
+           
+            <section class="bow-section govuk-!-padding-top-5 govuk-!-padding-bottom-6"><div class="bow-grid-column-two-thirds govuk-!-padding-bottom-9">
+  <h2 class="bowuk-heading-l font-univers-tagline">Custom Towing Solutions for Any Job</h2>
+  <p class="bowuk-body">Got something unusual to tow? From oversized trailers to farm equipment, we can tow just about anything. If it rolls (or even if it doesn’t), we have the gear and expertise to move it.</p>
+  <ul class="bowuk-list bowuk-list--bullet">
     <li>Recreational vehicles and trailers</li>
     <li>Farm machinery and industrial equipment</li>
     <li>Heavy-duty trucks</li>
   </ul>
-</div></p>
-            
-<div class="govuk-grid-column-two-thirds">
+</div></section>
+          </div>
+        </div>
+      </div>
 
- <h1 class="govuk-heading-l">Contact us</h1>
+      <section class="bow-accordion-band bow-bg-black" aria-label="Frequently asked questions">
+        <div class="bow-width-container bow-main-section bow-section">
+          <div class="bow-accordion-inner">
+  <h2 class="bow-heading-l font-univers-tagline">Frequently Asked Questions</h2>
+
+  <details class="bow-details">
+    <summary class="bow-details__summary">
+      <h2 class="bow-heading-m bow-details__summary-text">
+        What areas do you serve?
+      </h2>
+    </summary>
+    <div class="bow-details__text">
+      We serve Calgary and surrounding areas, including rural roads and highways.
+    </div>
+  </details>
+
+  <details class="bow-details">
+    <summary class="bow-details__summary">
+       <h2 class="bow-heading-m bow-details__summary-text">
+        Are your services available 24/7?
+      </h2>
+    </summary>
+    <div class="bow-details__text">
+      Yes, we offer emergency towing and roadside assistance 24 hours a day, 7 days a week.
+    </div>
+  </details>
+
+  <details class="bow-details">
+    <summary class="bow-details__summary">
+       <h2 class="bow-heading-m bow-details__summary-text">
+        What types of vehicles do you tow?
+      </h2>
+    </summary>
+    <div class="bow-details__text">
+      We tow all types of vehicles including cars, trucks, motorcycles, and heavy-duty equipment.
+    </div>
+  </details>
+
+  <details class="bow-details">
+    <summary class="bow-details__summary">
+       <h2 class="bow-heading-m bow-details__summary-text">
+        How much does it cost?
+      </h2>
+    </summary>
+    <div class="bow-details__text">
+      Our prices vary by service and distance. Contact us directly for a free estimate.
+    </div>
+  </details>
+</div>
+        </div>
+      </section>
+
+      <section class="bow-contact-section bow-section" aria-label="Contact">
+        <div class="bow-width-container bow-main-section">
+          <div class="bow-contact-split">
+            <div class="bow-contact-split__form">
+              
+<div  class="govuk-!-padding-bottom-8" >
+
+ <h2 class="bow-heading-l font-univers-tagline">Contact us</h2>
 
 <form
   name="contact"
@@ -143,112 +254,87 @@
   action="/thank-you/"
   data-netlify="true"
   netlify-honeypot="bot-field"
-  class="govuk-!-margin-bottom-6"
+ 
   netlify
 >
   
   <input type="hidden" name="form-name" value="contact" />
 
   
-  <p class="govuk-visually-hidden">
+  <p class="bow-visually-hidden">
     <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
 
- <div class="govuk-grid-row">
- <div class="govuk-grid-column-one-half">
-  <div class="govuk-form-group">
+ <div class="bow-grid-row">
+ <div class="bow-grid-column-one-half">
+  <div class="bow-form-group">
     
-      <label class="govuk-label" for="name">Name</label>
-      <input class="govuk-input" id="name" name="name" type="text" required />
+      <label class="bow-label" for="name">Name</label>
+      <input class="bow-input" id="name" name="name" type="text" required />
     </div>
   </div>
-<div class="govuk-grid-column-one-half">
-  <div class="govuk-form-group">
+<div class="bow-grid-column-one-half">
+  <div class="bow-form-group">
     
-      <label class="govuk-label" for="email">Email</label>
-      <input class="govuk-input" id="email" name="email" type="email" required />
+      <label class="bow-label" for="email">Email</label>
+      <input class="bow-input" id="email" name="email" type="email" required />
     </div>
   </div>
 </div>
 
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="phone">Phone</label>
-    <input class="govuk-input" id="phone" name="phone" type="tel" />
+  <div class="bow-form-group">
+    <label class="bow-label" for="phone">Phone</label>
+    <input class="bow-input" id="phone" name="phone" type="tel" />
   </div>
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="message">Message</label>
-    <textarea class="govuk-textarea" id="message" name="message" rows="6" required></textarea>
+  <div class="bow-form-group">
+    <label class="bow-label" for="message">Message</label>
+    <textarea class="bow-textarea" id="message" name="message" rows="6" required></textarea>
   </div>
 
 
 
-  <button class="govuk-button" type="submit">Send</button>
+  <button class="bow-button" type="submit">Send</button>
 </form>
 </div>
-            <div class="govuk-grid-column-two-thirds">
-              <section style="margin-bottom: 30px">
-  <h2 class="govuk-heading-l">Frequently Asked Questions</h2>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <h2 class="govuk-heading-m govuk-details__summary-text">
-        What areas do you serve?
-      </h2>
-    </summary>
-    <div class="govuk-details__text">
-      We serve Calgary and surrounding areas, including rural roads and highways.
-    </div>
-  </details>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-       <h2 class="govuk-heading-m govuk-details__summary-text">
-        Are your services available 24/7?
-      </h2>
-    </summary>
-    <div class="govuk-details__text">
-      Yes, we offer emergency towing and roadside assistance 24 hours a day, 7 days a week.
-    </div>
-  </details>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-       <h2 class="govuk-heading-m govuk-details__summary-text">
-        What types of vehicles do you tow?
-      </h2>
-    </summary>
-    <div class="govuk-details__text">
-      We tow all types of vehicles including cars, trucks, motorcycles, and heavy-duty equipment.
-    </div>
-  </details>
-
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-       <h2 class="govuk-heading-m govuk-details__summary-text">
-        How much does it cost?
-      </h2>
-    </summary>
-    <div class="govuk-details__text">
-      Our prices vary by service and distance. Contact us directly for a free estimate.
-    </div>
-  </details>
-</section>
             </div>
+            <div class="bow-contact-split__media">
+              
 
+
+  
+
+
+
+  
+
+
+<div class="bow-video-bg" aria-hidden="true">
+  <video
+    class="bow-video-bg__video"
+    src="/assets/video/bmf.MOV.mov"
+    poster="/assets/images/towing.webp"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  ></video>
+  <div class="bow-video-bg__scrim"></div>
+</div>
+
+
+            </div>
           </div>
-
         </div>
-
-      </div>
-
+      </section>
     </main>
 
-    <footer class="govuk-footer">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-quarter">
+    <footer class="bow-footer">
+  <div class="bow-width-container">
+    <div class="bow-grid-row">
+      <div class="bow-grid-column-one-quarter">
         <p>
           <img
           src="/assets/images/blacklogo.png"
@@ -261,32 +347,32 @@
 />
         </div>
       </p>
-      <div class="govuk-grid-column-one-quarter">
-        <p class="govuk-label" >
+      <div class="bow-grid-column-one-quarter">
+        <p class="bow-label" >
           <strong>Phone</strong>
         </p>
-        <p  class="govuk-body">
+        <p  class="bow-body">
           <strong>
-            <a class="govuk-link" href="tel:4036065084">(403) 606-5084</a>
+            <a class="bow-link" href="tel:4036065084">(403) 606-5084</a>
           </strong>
         </p>
       </div>
-      <div class="govuk-grid-column-one-quarter">
-        <p class="govuk-label" >
+      <div class="bow-grid-column-one-quarter">
+        <p class="bow-label" >
           <strong>Email</strong>
         </p>
-        <p  class="govuk-body">
+        <p  class="bow-body">
           <strong>
-            <a class="govuk-link" href="mailto:Bmf.towing@yahoo.com">Bmf.towing@yahoo.com</a>
+            <a class="bow-link" href="mailto:Bmf.towing@yahoo.com">Bmf.towing@yahoo.com</a>
           </strong>
         </div>
-        <div class="govuk-grid-column-one-quarter">
-          <p class="govuk-label" >
+        <div class="bow-grid-column-one-quarter">
+          <p class="bow-label" >
             <strong>Socials</strong>
           </p>
-          <p  class="govuk-body">
+          <p  class="bow-body">
             <strong>
-              <a class="govuk-link" href="https://www.instagram.com/bmf.towing/">Instagram</a>
+              <a class="bow-link" href="https://www.instagram.com/bmf.towing/">Instagram</a>
             </strong>
           </p>
 

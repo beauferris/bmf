@@ -1,0 +1,52 @@
+<div class="bow-hero-with-video">
+  <div class="bow-hero-with-video__media" aria-hidden="true">
+    {% if landing_video %}
+    <video
+      class="bow-hero-with-video__video"
+      src="{{ landing_video }}"
+      {% if landing_video_poster %}poster="{{ landing_video_poster }}"{% endif %}
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+    {% elif hero_background_image %}
+    <img
+      class="bow-hero-with-video__img"
+      src="{{ hero_background_image }}"
+      alt=""
+      decoding="sync"
+      fetchpriority="high"
+      loading="eager"
+    />
+    {% endif %}
+    <div class="bow-hero-with-video__scrim"></div>
+  </div>
+
+  {% include "partials/header.njk" %}
+
+  <div class="bow_landing govuk-!-padding-bottom-9 bow_landing--hero-fullbleed">
+    <div class="bow-width-container bow-landing-hero__container">
+      <div class="bow-landing-hero bow-landing-hero--split">
+        {% if page.url != '/' %}
+        <div class="bow-landing-hero__top">
+          {% include "partials/breadcrumbs.njk" %}
+        </div>
+        {% endif %}
+        <div class="bow-landing-hero__bottom">
+          <div class="bow-landing-hero__col bow-landing-hero__col--lead">
+            <h1 class="bow-landing-hero__title bow-heading-xxl font-univers-tagline">{{ title }}</h1>
+            {% if button_title %}
+            <p class="bow-landing-hero__cta">
+              <a href="{{ button_link }}" class="bow-button bow-button--dark bow-button--start">{{ button_title }}</a>
+            </p>
+            {% endif %}
+          </div>
+          <div class="bow-landing-hero__col bow-landing-hero__col--body">
+            <p class="bow-landing-hero__lead bow-body-lead">{{ description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

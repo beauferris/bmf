@@ -1,26 +1,32 @@
 ---
 layout: layout.njk
-title: The Best Tow Company
-description: Get 24/7 towing and roadside assistance
+title: THE BEST TOWING COMPANY
+description: Providing 24/7 towing and roadside assistance in Calgary AB and surrounding areas.
 button_title: Call (403) 606-5084
 button_link: "tel:4036065084"
-image_url : "/assets/images/specialty-and-luxury-vehicles.jpeg" 
+hero_background_image: "/assets/images/towing.png"
+landing_layout: home
 ---
 
-<div class="govuk-width-container">
-  <h1>Services</h1>
+<div >
+  <h2 class="bow-heading-l font-univers-tagline">What we do</h2>
+  <div>
+<p class="bow-body-lead">We’re a locally owned towing company based in Calgary, providing fast, reliable roadside assistance 24/7. Whether you’re stuck on the side of the road, dealing with a breakdown, or need a vehicle moved safely, we’re here to help.</p>
+            <p class="bow-body-lead">Our focus is simple — show up quickly, treat your vehicle with care, and get you back on track without the stress. We proudly serve Calgary and surrounding areas with dependable service you can count on anytime, day or night.</p>
+
+            </div>
   <div class="dfe-grid-container">
     {% for posts in collections.posts %}
 
-      <div class="dfe-card">
+      <div class="dfe-card dfe-arrow">
         {% if posts.data.image_url %}
           {# <img src={{posts.data.image_url}} alt={title} /> #}
         {% endif %}
         <div class="dfe-card-container">
-          <h3 class="govuk-heading-m">
-            <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
+          <h3 class="bow-heading-m">
+            <a class="bow-link bow-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
           </h3>
-          <p class="govuk-body">{{posts.data.description}}
+        
           </div>
         </div>
 
